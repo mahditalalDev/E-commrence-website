@@ -58,7 +58,7 @@ export default function Header1() {
         {/* hot btn */}
         <Typography
           sx={{
-            mr: 2,
+            mx: 1,
             p: "3px 10px",
             bgcolor: "#d23f57",
             borderRadius: 12,
@@ -77,11 +77,11 @@ export default function Header1() {
 
             borderRadius: 12,
             fontSize: "16px",
-            fontWeight: "bold",
+            fontWeight: "400",
             color: "#f5f5f5",
           }}
         >
-          free Shipping Now
+          free Shipping
         </Typography>
 
         <Box flexGrow={1} />
@@ -150,7 +150,7 @@ export default function Header1() {
         >
           {options.map((option, index) => (
             <MenuItem
-              sx={{ fontSize: "11px", p: "3px 10px", minHeight: "10px" }}
+              sx={{ fontSize: "12px", p: "4px 15px", minHeight: "15px" }}
               key={option}
               selected={index === selectedIndex}
               onClick={(event) => handleMenuItemClick(event, index)}
