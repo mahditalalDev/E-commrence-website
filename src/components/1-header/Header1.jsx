@@ -1,6 +1,13 @@
 // ? ===MUI elements
 import { ColorModeContext } from "../../theme";
-import { Box, IconButton, Stack, Typography, useTheme } from "@mui/material";
+import {
+  Box,
+  IconButton,
+  ListItem,
+  Stack,
+  Typography,
+  useTheme,
+} from "@mui/material";
 import { useContext } from "react";
 import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
@@ -16,6 +23,7 @@ import Menu from "@mui/material/Menu";
 
 // ? ===React Hooks
 import { useState } from "react";
+import { ExpandMore } from "@mui/icons-material";
 
 const options = ["EN", "AR"];
 
@@ -107,44 +115,66 @@ export default function Header1() {
         )}
         {/*=======================theme section */}
         {/* Lang Menu */}
-        <div>
-          <List component="nav" aria-label="Languagues" sx={{}}>
-            <ListItemButton
-              id="lock-button"
-              aria-haspopup="listbox"
-              aria-controls="lock-menu"
-              aria-label="sda"
-              aria-expanded={open ? "true" : undefined}
-              onClick={handleClickListItem}
-            >
-              <ListItemText primary={options[selectedIndex]} />
-            </ListItemButton>
-          </List>
-          <Menu
-            id="lock-menu"
-            anchorEl={anchorEl}
-            open={open}
-            onClose={handleClose}
-            MenuListProps={{
-              "aria-labelledby": "lock-button",
-              role: "listbox",
-            }}
+
+        <List component="nav" sx={{ p: 0, m: 0 }}>
+          <ListItem
+            id="lock-button"
+            aria-haspopup="listbox"
+            aria-controls="lock-menu"
+            aria-label="when device is locked"
+            aria-expanded={open ? "true" : undefined}
+            onClick={handleClickListItem}
+            sx={{ "&:hover": { cursor: "pointer" }, px: 1 }}
           >
-            {options.map((option, index) => (
-              <MenuItem
-                key={option}
-                disabled={index === 0}
-                selected={index === selectedIndex}
-                onClick={(event) => handleMenuItemClick(event, index)}
-              >
-                {option}
-              </MenuItem>
-            ))}
-          </Menu>
-        </div>
+            <ListItemText
+              sx={{
+                ".MuiTypography-root": { fontSize: "12px", color: "#fff" },
+              }}
+              secondary={options[selectedIndex]}
+            />
+            <ExpandMore sx={{ fontSize: "16px", color: "#fff" }} />
+          </ListItem>
+        </List>
+        <Menu
+          id="lock-menu"
+          anchorEl={anchorEl}
+          open={open}
+          onClose={handleClose}
+          MenuListProps={{
+            "aria-labelledby": "lock-button",
+            role: "listbox",
+          }}
+        >
+          {options.map((option, index) => (
+            <MenuItem
+              sx={{ fontSize: "11px", p: "3px 10px", minHeight: "10px" }}
+              key={option}
+              selected={index === selectedIndex}
+              onClick={(event) => handleMenuItemClick(event, index)}
+            >
+              {option}
+            </MenuItem>
+          ))}
+        </Menu>
+
         {/* Links social media */}
-        <InstagramIcon style={{ color: "red[400]" }} />
-        <WhatsAppIcon style={{ color: "green" }} />
+        <InstagramIcon
+          sx={{
+            "&:hover": { color: "red", transition: "0.3s", scale: "1.1" },
+            fontSize: "24px",
+            mx: 1,
+            color: "#fff",
+          }}
+        />
+        <WhatsAppIcon
+          sx={{
+            "&:hover": { color: "green", transition: "0.3s", scale: "1.1" },
+
+            fontSize: "24px",
+            mx: 1,
+            color: "#fff",
+          }}
+        />
       </Stack>
     </Box>
   );
