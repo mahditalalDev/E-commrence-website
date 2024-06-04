@@ -9,27 +9,25 @@ export const getDesignTokens = (mode) => ({
       ? {
           // palette values for light mode
           text: {
-            primary: "#2B3445",
+            primary: "#1F2937", // darker cool gray for primary text
           },
           neutral: {
-            main: "#64748B",
+            main: "#5B728A", // cooler tone
           },
-
           favColor: {
-            main: grey[300],
+            main: "#E0E7FF", // light cool blue
           },
         }
       : {
           // palette values for dark mode
-          neutral: {
-            main: "#64748B",
-          },
-
-          favColor: {
-            main: grey[800],
-          },
           text: {
-            primary: "#fff",
+            primary: "#E0E7FF", // light cool blue for primary text
+          },
+          neutral: {
+            main: "#5B728A", // cooler tone
+          },
+          favColor: {
+            main: "#374151", // dark cool gray
           },
         }),
   },

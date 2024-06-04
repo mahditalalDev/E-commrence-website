@@ -12,8 +12,12 @@ import { ColorModeContext, useMode } from "./theme";
 function App() {
   const [theme, colorMode] = useMode();
   return (
+    // @ts-ignore
     <ColorModeContext.Provider value={colorMode}>
-      <ThemeProvider theme={theme}>
+      <ThemeProvider
+        // @ts-ignore
+        theme={theme}
+      >
         <CssBaseline />
         <Header1 />
         <Header2 />
