@@ -8,20 +8,23 @@ import {
   Typography,
   useTheme,
 } from "@mui/material";
+
 import { useContext } from "react";
 import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
-// ? ===icons
+
+//* =====>  Icons <=========
 import InstagramIcon from "@mui/icons-material/Instagram";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
-// ? ===menu list AR and EN
+
+
+// *=====>  menu list AR and EN <=========
 import List from "@mui/material/List";
-import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import MenuItem from "@mui/material/MenuItem";
 import Menu from "@mui/material/Menu";
 
-// ? ===React Hooks
+// *=====>  React Hooks <=========
 import { useState } from "react";
 import { ExpandMore } from "@mui/icons-material";
 
