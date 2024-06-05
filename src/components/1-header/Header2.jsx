@@ -93,7 +93,11 @@ export default function Header2() {
 
   return (
     <Container style={{ marginTop: "5px", padding: "0" }}>
-      <Stack direction={"row"} alignItems={"center"}>
+      <Stack
+        direction={"row"}
+        alignItems={"center"}
+        justifyContent={"space-between"}
+      >
         <img
           style={{ borderRadius: "30px" }}
           src={
@@ -103,7 +107,7 @@ export default function Header2() {
           width="100px"
           height={"100px"}
         />
-        <Box flexGrow={1}></Box>
+
         <Search
           sx={{
             display: "flex",
@@ -176,7 +180,6 @@ export default function Header2() {
             </Menu>
           </div>
         </Search>
-        <Box flexGrow={1}></Box>
 
         <Stack direction={"row"} alignItems={"center"}>
           <IconButton aria-label="cart">
