@@ -21,7 +21,9 @@ function App() {
       >
         <CssBaseline />
         <Header1 />
+        <br></br>
         <Header2 />
+        <br></br>
         <Header3 />
         <Hero />
         <Main />

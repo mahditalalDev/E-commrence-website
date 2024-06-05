@@ -91,7 +91,7 @@ export default function Header2() {
   const theme = useTheme();
 
   return (
-    <Container style={{ marginTop: "5px", padding: "0" }}>
+    <Container>
       <Stack
         direction={"row"}
         alignItems={"center"}
