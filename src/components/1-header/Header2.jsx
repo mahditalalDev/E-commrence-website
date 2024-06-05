@@ -1,7 +1,6 @@
 import { ExpandMore, ShoppingCartOutlined } from "@mui/icons-material";
 import {
   Badge,
-  Box,
   Container,
   IconButton,
   InputBase,
@@ -20,7 +19,7 @@ import MenuItem from "@mui/material/MenuItem";
 import Menu from "@mui/material/Menu";
 
 const Search = styled("div")(({ theme }) => ({
-  flexGrow: 0.4,
+  flexGrow: 0.5,
   position: "relative",
   borderRadius: theme.shape.borderRadius,
   border: "1px solid #777",
@@ -148,7 +147,7 @@ export default function Header2() {
                 <ListItemText
                   // className="border"
                   sx={{
-                    width: 93,
+                    width: 70,
                     textAlign: "center",
                     "&:hover": { cursor: "pointer" },
                   }}
